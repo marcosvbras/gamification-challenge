@@ -30,6 +30,17 @@ The web application was written with **Ruby 2.5.1** and **Rails 5.2.0**. It is r
 
 The database used was **MySQL 5.7.22**.
 
+### Ruby dependencies
+
+All dependencies are in Gemfile, but I need to highlight a special Gem called [Filewatcher](https://github.com/thomasfl/filewatcher). It was totally necessary to make all this thing work.
+
+## How to run
+
+1. Set your MySQL's user and password in ``config/database.yml`` file.
+1. On project root directory, run ``rake db:create`` and ``rails db:migrate`` to create the database and all related tables.
+1. On project root directory, run ``bundle install`` to install all ruby dependencies.
+1. On project root directory again, run ``rails server`` to start Puma server and that's it!
+
 <!-- * Configuration
 
 * Database creation
