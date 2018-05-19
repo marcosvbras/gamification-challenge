@@ -1,0 +1,22 @@
+<h1>Listagem de pontuações</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Nome de Usuário</th>
+    <th>Id de Usuário</th>
+    <th>Pontuação</th>
+    <th></th>
+  </tr>
+
+  <% @scores.each do |score| %>
+    <tr>
+      <td><%= score.date %></td>
+      <td><%= score.username %></td>
+      <td><%= score.uid %></td>
+      <td><%= score.points %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+  <% end %>
+
+</table>
