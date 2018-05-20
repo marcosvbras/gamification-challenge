@@ -13,7 +13,7 @@ This challenge is to develop a web application using [Rails](https://rubyonrails
 The **score processing service** must watch a directory and process new scores every time a new ``.csv`` file arrives in this directory. Each user score must be persisted in a database and a user cannot have more than 3126 points.
 
 The ``.csv`` file must have lines with the following structure:
-``2018-05-14; Karla; 123;500;``. They are respectively: **score date**, **user name**, **user ID** and **points** table columns.
+``2018-05-14; Karla; 123;500;``. They are respectively: **date**, **username**, **uid** and **points** table columns.
 
 <p align="center">
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/challenge.gif" alt="Custom image"/>
@@ -47,7 +47,7 @@ mysql> set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ER
 
 ## How it works
 
-You must visit ``localhost:3000/scores`` to see the ranking page. It groups all scores by user and show who are the Big Players of the system.
+You must visit ``localhost:3000/scores`` to see the ranking page. It groups all scores by user and it is ordered to show who are the Big Players of the system.
 <p align="center">
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index.png" alt="Custom image"/>
 </p>
@@ -56,12 +56,12 @@ To see some magic here, everything you need to do is put some file from ``exampl
 
 ## Final Considerations
 
-This challenge was LEGEN...
+This challenge was **LEGEN**...
 
 <p align="center">
-  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/wfi.gof" alt="Custom image"/>
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/wfi.gif" alt="Custom image"/>
 </p>
 
-...DARY!
+...**DARY**!
 
-It's awesome to build things with Rails, everything is so intuitive and simple. With only few minutes you can have something running and the framework gives a lot of tips for you. The difficulty here was not being able to stop looking for ways to improve a small project like that.
+It's awesome to build things with Rails, everything is so intuitive and simple. With only few minutes you can have something running and the framework gives a lot of tips for you. The difficulty here was not being able to stop looking for ways to improve a small project like that and to create the best ``README.md`` of the Dito's recruitment process.
