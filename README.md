@@ -10,7 +10,7 @@ Users have scores that are sent daily to be processed in the [Dito](http://dito.
 
 This challenge is to develop a web application using [Rails](https://rubyonrails.org/). The application must have a **score processing service** and a page to list all score stored in the database.
 
-The **score processing service** must observe a directory and process new scores every time a new ``.csv`` file arrives in this directory. Each user score must be persisted in a database and a user cannot have more than 3126 points.
+The **score processing service** must watch a directory and process new scores every time a new ``.csv`` file arrives in this directory. Each user score must be persisted in a database and a user cannot have more than 3126 points.
 
 The ``.csv`` file must have lines with the following structure:
 ``2018-05-14; Karla; 123;500;``. They are respectively: **score date**, **user name**, **user ID** and **points** table columns.
@@ -38,12 +38,30 @@ All dependencies are in Gemfile, but I need to highlight a special Gem called [F
 1.  Set your MySQL's user and password in ``config/database.yml`` file.
 2.  On project root directory, run ``rake db:create``, ``rake db:migrate`` and ``rake db:seed`` to create the database and populate it.
 3.  On project root directory, run ``bundle install`` to install all ruby dependencies.
-4.  On project root directory, run ``rails server`` to start Puma server and that's it!
+4. Open the MySQL command line and set the following settings:
+```bash
+mysql> set global sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+mysql> set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+```
+5.  On project root directory, run ``rails server`` to start Puma server and that's it!
 
 ## How it works
 
-Everything you need to do is put some ``.csv`` file from ``example_files/`` project directory inside ``csv/`` or create yours with the same structure.
+You must visit ``localhost:3000/scores`` to see the ranking page. It groups all scores by user and show who are the Big Players of the system.
+<p align="center">
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index.png" alt="Custom image"/>
+</p>
 
-Application URL's:
-- `/scores`: Return a page with all saved user scores.
-- `/scores/<id>`: Return a page with a specific user score by id.
+To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create yours with the same structure. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
+
+## Final Considerations
+
+This challenge was LEGEN...
+
+<p align="center">
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/wfi.gof" alt="Custom image"/>
+</p>
+
+...DARY!
+
+It's awesome to build things with Rails, everything is so intuitive and simple. With only few minutes you can have something running and the framework gives a lot of tips for you. The difficulty here was not being able to stop looking for ways to improve a small project like that.

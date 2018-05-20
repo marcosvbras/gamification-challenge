@@ -1,11 +1,11 @@
 <nav class="light-blue lighten-1" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="center brand-logo">Dito Gamification</a>
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Dito Gamification</a>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
-    <h2 class="header center orange-text">Tabela de Pontos</h2>
+    <h2 class="header center orange-text">Ranking</h2>
   </div>
 </div>
 
@@ -13,11 +13,9 @@
   <table class="striped">
     <thead>
       <tr>
-        <th>ID de Usuário</th>
+        <th>UID</th>
         <th>Nome</th>
-        <th>Pontuação</th>
-        <th>Data</th>
-        <th></th>
+        <th>Pontuação Total</th>
       </tr>
     </thead>
     <tbody>
@@ -26,8 +24,6 @@
           <td><%= score.uid %></td>
           <td><%= score.username %></td>
           <td><%= score.points %></td>
-          <td><%= score.date %></td>
-          <td><%= link_to 'Ver mais', score_path(score) %></td>
         </tr>
       <% end %>
     </tbody>
