@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'filewatcher', '~> 1.0.1'
+# Always when rails >= 5.1
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

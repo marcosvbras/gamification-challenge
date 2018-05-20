@@ -1,22 +1,35 @@
-<h1>Listagem de pontuações</h1>
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="center brand-logo">Dito Gamification</a>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <h2 class="header center orange-text">Tabela de Pontos</h2>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Data</th>
-    <th>Nome de Usuário</th>
-    <th>Id de Usuário</th>
-    <th>Pontuação</th>
-    <th></th>
-  </tr>
-
-  <% @scores.each do |score| %>
-    <tr>
-      <td><%= score.date %></td>
-      <td><%= score.username %></td>
-      <td><%= score.uid %></td>
-      <td><%= score.points %></td>
-      <td><%= link_to 'Show', score_path(score) %></td>
-    </tr>
-  <% end %>
-
-</table>
+<div class="container">
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>ID de Usuário</th>
+        <th>Nome</th>
+        <th>Pontuação</th>
+        <th>Data</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @scores.each do |score| %>
+        <tr>
+          <td><%= score.uid %></td>
+          <td><%= score.username %></td>
+          <td><%= score.points %></td>
+          <td><%= score.date %></td>
+          <td><%= link_to 'Ver mais', score_path(score) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

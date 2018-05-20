@@ -1,4 +1,4 @@
-# Dito Gamification
+# Gamification Challenge
 
 ## What is this?
 
@@ -33,17 +33,17 @@ The database used was **MySQL 5.7.22**.
 
 All dependencies are in Gemfile, but I need to highlight a special Gem called [Filewatcher](https://github.com/thomasfl/filewatcher). It was totally necessary to make all this thing work.
 
-## How to run
+## :running: How to run
 
 1.  Set your MySQL's user and password in ``config/database.yml`` file.
-1.  On project root directory, run ``rake db:create`` and ``rails db:migrate`` to create the database and all related tables.
-1.  On project root directory, run ``bundle install`` to install all ruby dependencies.
-1.  On project root directory, run ``rails server`` to start Puma server and that's it!
+2.  On project root directory, run ``rake db:create``, ``rake db:migrate`` and ``rake db:seed`` to create the database and populate it.
+3.  On project root directory, run ``bundle install`` to install all ruby dependencies.
+4.  On project root directory, run ``rails server`` to start Puma server and that's it!
 
-<!-- * Configuration
+## How it works
 
-* Database creation
+Everything you need to do is put some ``.csv`` file from ``example_files/`` project directory inside ``csv/`` or create yours with the same structure.
 
-* Database initialization
-
-* How to run the test suite -->
+Application URL's:
+- `/scores`: Return a page with all saved user scores.
+- `/scores/<id>`: Return a page with a specific user score by id.
