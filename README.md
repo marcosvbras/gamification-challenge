@@ -64,6 +64,15 @@ If you click on some "Ver Mais" link, you will see all scores from a specific us
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index3.png" alt="Custom image"/>
 </p>
 
+If you want to add other directories to be watched, you can just update the ``config.csv_directories`` variable in ``config/environments.development.rb``:
+
+```ruby
+# Directories to be watched for Filewatcher
+config.csv_directories = ['csv/*.csv', '/home/marcosvbras/test/*.csv']
+```
+
+Now, the ``/home/marcosvbras/test/*.csv`` directory is also being watched, and you can put some ``.csv`` files to be processed.
+
 ## Final Considerations
 
 This challenge was **LEGEN**...
