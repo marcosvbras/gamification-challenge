@@ -49,29 +49,29 @@ mysql> set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ER
 
 You must visit ``localhost:3000/scores`` to see the ranking page. It groups all scores by user and it is ordered to show who are the Big Players of the system.
 <p align="center">
-  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index.png" alt="Custom image"/>
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index1.png" alt="Custom image"/>
 </p>
 
-To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create your own ``.csv`` file with the same structure of them. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
+To see some magic happen here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/``. If you want, you can create your own ``.csv`` file with the same structure of the other and put inside ``csv/`` directory as well. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores:
 
 <p align="center">
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index2.png" alt="Custom image"/>
 </p>
 
-If you click on some "Ver Mais" link, you will see all scores from a specific user.
+If you click on some "Ver Mais" link, you will see all scores from a specific user:
 
 <p align="center">
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index3.png" alt="Custom image"/>
 </p>
 
-If you want to add other directories to be watched, you can just update the ``config.csv_directories`` variable in ``config/environments.development.rb``:
+If you want to add other directories to be watched, you can just update the ``config.csv_directories`` variable in ``config/environments.development.rb`` with another path:
 
 ```ruby
 # Directories to be watched for Filewatcher
 config.csv_directories = ['csv/*.csv', '/home/marcosvbras/test/*.csv']
 ```
 
-Now, the ``/home/marcosvbras/test/*.csv`` directory is also being watched, and you can put some ``.csv`` files to be processed.
+Now, the ``/home/marcosvbras/test/*.csv`` directory is also being watched, and you can put some ``.csv`` files to be processed. Don't forget the file extension at the end of the path.
 
 ## Final Considerations
 
@@ -83,4 +83,4 @@ This challenge was **LEGEN**...
 
 ...**DARY**!
 
-It's awesome to build things with Rails, everything is so intuitive and simple. With only few minutes you can have something running and the framework gives a lot of tips for you. The difficulty here was not being able to stop looking for ways to improve a small project like that and to create the best ``README.md`` of the Dito's recruitment process.
+It's awesome to build things with Rails, everything is so intuitive and simple. With only few minutes you can have something running and the framework gives a lot of tips for you. The difficulty here was not being able to stop looking for ways to improve a small project like that.
