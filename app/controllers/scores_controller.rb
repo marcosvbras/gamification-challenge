@@ -4,8 +4,8 @@ class ScoresController < ApplicationController
     @scores = Score.select("username, uid, sum(points) as points").group("uid").order("sum(points) DESC")
   end
 
-  def show
-    @score = Score.find(params[:id])
+  def list_by_user
+    @scores = Score.where("uid":params[:uid]).order(date: :desc)
   end
 
 end

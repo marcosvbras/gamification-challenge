@@ -5,7 +5,7 @@
 </nav>
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
-    <h2 class="header center orange-text">Ranking</h2>
+    <h2 class="header center orange-text">Pontuações</h2>
   </div>
 </div>
 
@@ -14,18 +14,18 @@
     <thead>
       <tr>
         <th>UID</th>
+        <th>Data de Pontuação</th>
         <th>Nome</th>
-        <th>Pontuação Total</th>
-        <th></th>
+        <th>Pontuação</th>
       </tr>
     </thead>
     <tbody>
       <% @scores.each do |score| %>
         <tr>
           <td><%= score.uid %></td>
+          <td><%= l score.date.to_date, format: :customformat %></td>
           <td><%= score.username %></td>
           <td><%= score.points %></td>
-          <td><a href="/users/<%= score.uid %>/scores">Ver Mais</a></td>
         </tr>
       <% end %>
     </tbody>

@@ -8,9 +8,9 @@ This project was done to complete [Dito](http://dito.com.br/)'s challenge to Ful
 
 Users have scores that are sent daily to be processed in the [Dito](http://dito.com.br/)'s system. All user scores are sent to the system via ``.csv`` files and each file has a lot of lines with user scores.
 
-This challenge is to develop a web application using [Rails](https://rubyonrails.org/). The application must have a **score processing service** and a page to list all score stored in the database.
+This challenge is to develop a web application using [Rails](https://rubyonrails.org/). The application must have a **score processing service** and a page to list all scores stored in the database.
 
-The **score processing service** must watch a directory and process new scores every time a new ``.csv`` file arrives in this directory. Each user score must be persisted in a database and a user cannot have more than 3126 points.
+The **score processing service** must **watch a directory** and process new scores every time a new ``.csv`` file arrives in this directory. Each user score must be persisted in a database and a user cannot have more than 3126 points.
 
 The ``.csv`` file must have lines with the following structure:
 ``2018-05-14; Karla; 123;500;``. They are respectively: **date**, **username**, **uid** and **points** table columns.
@@ -31,11 +31,11 @@ The database used was **MySQL 5.7.22**.
 
 ### Ruby dependencies
 
-All dependencies are in Gemfile, but I need to highlight a special Gem called [Filewatcher](https://github.com/thomasfl/filewatcher). It was totally necessary to make all this thing work.
+All dependencies are in ``Gemfile``, but I need to highlight a special Gem called [Filewatcher](https://github.com/thomasfl/filewatcher). It was totally necessary to make it all work.
 
 ## :running: How to run
 
-1.  Set your MySQL's user and password in ``config/database.yml`` file.
+1.  Set your MySQL's **user** and **password** in ``config/database.yml`` file.
 2.  On project root directory, run ``rake db:create``, ``rake db:migrate`` and ``rake db:seed`` to create the database and populate it.
 3.  On project root directory, run ``bundle install`` to install all ruby dependencies.
 4. Open the MySQL command line and set the following settings:
@@ -52,7 +52,17 @@ You must visit ``localhost:3000/scores`` to see the ranking page. It groups all 
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index.png" alt="Custom image"/>
 </p>
 
-To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create yours with the same structure. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
+To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create your own ``.csv`` file with the same structure. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
+
+<p align="center">
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index2.png" alt="Custom image"/>
+</p>
+
+If you click on some "Ver Mais" link, you will see all scores from a specific user.
+
+<p align="center">
+  <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index3.png" alt="Custom image"/>
+</p>
 
 ## Final Considerations
 
