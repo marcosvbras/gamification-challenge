@@ -52,7 +52,7 @@ You must visit ``localhost:3000/scores`` to see the ranking page. It groups all 
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index.png" alt="Custom image"/>
 </p>
 
-To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create your own ``.csv`` file with the same structure. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
+To see some magic here, everything you need to do is put some file from ``example_files/`` directory inside ``csv/`` or create your own ``.csv`` file with the same structure of them. The system will know that there is a new score file and will process all new data. After that, you can reload the page and see new scores.
 
 <p align="center">
   <img src="https://raw.github.com/marcosvbras/gamification-challenge/master/githubimgs/index2.png" alt="Custom image"/>
